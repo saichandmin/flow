@@ -1,0 +1,190 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the entire app */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* React Flow Container */
+.react-flow-container {
+  flex: 1;
+  height: 100%;
+  background-color: #fafafa;
+  border-left: 1px solid #ddd;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 320px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Sidebar Header */
+.sidebar h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Sidebar input fields */
+.sidebar input,
+.sidebar select {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Sidebar buttons */
+.sidebar button {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #45a049;
+}
+
+/* Sidebar button (default blue) */
+.sidebar .node-item,
+.sidebar .edge-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.sidebar button {
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+}
+
+.sidebar input {
+  margin: 8px 0;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* MiniMap styling */
+.react-flow__minimap {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Controls styling */
+.react-flow__controls {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .react-flow-container {
+    height: 400px; /* Fix the height for smaller screens */
+  }
+
+  .sidebar {
+    width: 100%;
+    box-shadow: none;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+  }
+
+  .sidebar h3 {
+    font-size: 20px;
+  }
+
+  .sidebar button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .sidebar input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .react-flow-container {
+    height: 300px; /* Fix the height for very small screens */
+  }
+
+  .sidebar {
+    padding: 12px;
+  }
+
+  .sidebar h3 {
+    font-size: 18px;
+  }
+
+  .sidebar button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .sidebar input {
+    font-size: 12px;
+  }
+}
